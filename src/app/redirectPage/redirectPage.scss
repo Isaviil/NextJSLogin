@@ -16,6 +16,7 @@
     background-repeat: no-repeat;
     background-position: center;
     position: relative;
+    gap: 7px;
 
     h1{
         @extend %h1-md-02;
@@ -24,4 +25,20 @@
     button{
         @extend %btn-outline;
     }
+
+    @include mixins.respond-to(sm){
+        
+            
+            h1{
+                font-size: 1.25em;
+                text-align: center;
+            }
+
+            button{
+                font-size: .8em;
+            }
+        }
+    
+
 }
+

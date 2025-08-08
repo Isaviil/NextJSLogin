@@ -54,7 +54,7 @@
 
     @include mixins.respond-to(sm){
 
-        @include mixins.sizes(100%, 5.2vh);
+        @include mixins.sizes(100%, 6vh, null, 29px);
 
         &-right{
             width: 35%;

@@ -11,7 +11,7 @@ const Modal = ({title, redirectTo}) =>{
     useEffect(()=>{
             gsap.to(mod.current, {opacity: 1, pointerEvents: "auto", duration: 1, ease: "power2.out",
         onComplete: ()=>{
-            gsap.delayedCall(2, ()=> router.push(redirectTo))
+            gsap.delayedCall(1.5, ()=> router.push(redirectTo))
         }
         })
     }, [redirectTo])

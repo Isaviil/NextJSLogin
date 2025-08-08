@@ -115,11 +115,11 @@ input:-webkit-autofill:focus {
         .home{
 
             &-img{
-                @include mixins.sizes(85%, 20%, 350px, 170px);
+                @include mixins.sizes(85%, 20%, 350px, 150px);
             }
 
             &-logIn{
-                @include mixins.sizes(85%, 60%, 350px, 300px);
+                @include mixins.sizes(85%, 50%, 350px, 300px);
                 form{
 
                     .home-logIn-title{
@@ -177,12 +177,12 @@ input:-webkit-autofill:focus {
         .home{
             
             &-img{
-                @include mixins.sizes(90%, 20%, 320px, 170px);
+                @include mixins.sizes(90%, 20%, 320px, 130px);
 
             }
 
             &-logIn{
-                @include mixins.sizes(90%, 70%, 320px, 320px);
+                @include mixins.sizes(90%, 70%, 320px, 300px);
                 form{
 
                     .home-logIn-title{
@@ -209,8 +209,7 @@ input:-webkit-autofill:focus {
                             }   
 
                             input{
-                                @include mixins.f-prop(var(--color-regular-text), 95em, 300, "Montserrat");
-
+                                @include mixins.f-prop(var(--color-regular-text), .95em, 300, "Montserrat");
                             }
                         }
                     }

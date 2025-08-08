@@ -69,8 +69,8 @@ export default function SignUp(){
     return (
 
     <>
-    
-        {modalSuccess && <Modal title={modalSuccess.title}/>}
+        
+        {modalSuccess && <Modal title={modalSuccess.title} redirectTo="/homePage"/>}
 
         <section className='signUp' ref={containerRef}>
             <div className='signUp-img' ref={childContainerRef}>

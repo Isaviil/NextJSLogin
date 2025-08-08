@@ -1,0 +1,236 @@
+@use '../styles/mixins';
+@use '../styles/placeholders';
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-bg) inset !important;
+  -webkit-text-fill-color: var(--color-regular-text) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.home{
+    @extend %main-container;
+    background-image: linear-gradient(180deg, 
+    transparent,
+    transparent, 
+    var(--color-bg-01), 
+    var(--color-bg-02), 
+    var(--color-bg-03), 
+    var(--color-bg-04)), 
+    url(/images/e33bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &-img{
+        @include mixins.sizes(50%, 30%, 340px, 200px);
+        @extend %bdr-tp;
+        overflow: hidden;
+
+        img{
+            @extend %fit-cover;
+        }
+    }
+
+    &-logIn{
+        @include mixins.sizes(50%, 50%, 340px, 250px);
+
+        form{
+            @include mixins.sizes(100%, 100%);
+            @include mixins.d-prop(space-evenly, center, column);
+            @extend %bdr-btm;
+            background-color: var(--color-bg-05);
+            position: relative;
+
+            .home-logIn-title{
+                h1{
+                    @extend %h1-md-02;
+                }
+            }   
+
+            .home-logIn-input{
+                @include mixins.sizes(100%, 60%);
+                @include mixins.d-prop(space-between, center, column);
+
+
+                .user,
+                .password{
+                    @include mixins.sizes(80%, 46%);
+                    @include mixins.d-prop(start, center, column);
+                    gap: 3px;
+
+                    label{
+                        @extend %p-small;
+                    }
+
+                    input{
+                    @extend %pad-02;
+                    @extend %border-01;
+                    @include mixins.f-prop(var(--color-regular-text), .8em, 400);
+                    @include mixins.sizes(80%, 44%);
+                    background-color: var(--color-input-01);                                
+                    }
+                }
+            }   
+
+            .home-logIn-btn{
+                @include mixins.sizes(100%);
+                @include mixins.d-prop(center, center);
+                gap: 8px;
+
+                button,
+                a{
+                    @extend %btn-outline;
+
+                        &:hover{
+                        background-color: var(--color-btn-hover);
+                    }
+                }
+            }
+            
+
+            p{
+            position: absolute;
+            top: 102%;
+            @extend %p-small;  
+
+                a{
+                    color: var(--color-regular-text-02);
+                    @extend %tr-025s;
+
+                    &:hover{
+                        color: var(--color-regular-text-03);
+                    }
+                }
+            }   
+        }
+    }
+
+
+
+    
+    @include mixins.respond-to(md){
+        .home{
+
+            &-img{
+                @include mixins.sizes(85%, 20%, 350px, 170px);
+            }
+
+            &-logIn{
+                @include mixins.sizes(85%, 60%, 350px, 300px);
+                form{
+
+                    .home-logIn-title{
+
+                        h1{
+                           @include mixins.f-prop(var(--color-regular-text), 1.6em, 350, "Montserrat");
+                        }
+                    }
+
+                    .home-logIn-input{
+
+                        .user{
+                            label{
+                                @include mixins.f-prop(var(--color-regular-text), 1.1em, 300, "Montserrat");
+                            }
+
+                            input{
+                                @include mixins.f-prop(var(--color-regular-text), 1em, 400, "Montserrat");
+                                @include mixins.sizes(null, 38%)
+                            }
+                        }
+
+                        .password{
+                            label{  
+                                @include mixins.f-prop(var(--color-regular-text), 1.1em, 300, "Montserrat");
+                            }   
+
+                            input{
+                                @include mixins.f-prop(var(--color-regular-text), 1em, 300, "Montserrat");
+                                @include mixins.sizes(null, 38%)
+                            }
+                        }
+                    }
+
+                    .home-logIn-btn{
+                        a{
+                            @include mixins.f-prop(var(--color-regular-text), 1.15em, 300, "Montserrat");
+                        }
+
+                        button{
+                            @include mixins.f-prop(var(--color-regular-text), 1.15em, 300, "Montserrat");
+                        }
+                    }
+
+                    p{
+                        @include mixins.f-prop(var(--color-regular-text), .95em, 300, "Montserrat");
+                    }
+                }
+            }
+        }
+    }
+
+
+    @include mixins.respond-to(sm){
+        .home{
+            
+            &-img{
+                @include mixins.sizes(90%, 20%, 320px, 170px);
+
+            }
+
+            &-logIn{
+                @include mixins.sizes(90%, 70%, 320px, 320px);
+                form{
+
+                    .home-logIn-title{
+                        h1{
+                            @include mixins.f-prop(var(--color-regular-text), 1.3em, 350, "Montserrat");
+                        }
+                    }
+
+                    .home-logIn-input{
+                        .user{
+                            label{
+                                @include mixins.f-prop(var(--color-regular-text), .9em, 300, "Montserrat");
+                            }
+
+                            input{
+                                @include mixins.f-prop(var(--color-regular-text), .95em, 400, "Montserrat");
+
+                            }
+                        }
+
+                        .password{
+                            label{  
+                                @include mixins.f-prop(var(--color-regular-text), .9em, 300, "Montserrat");
+                            }   
+
+                            input{
+                                @include mixins.f-prop(var(--color-regular-text), 95em, 300, "Montserrat");
+
+                            }
+                        }
+                    }
+
+                    .home-logIn-btn{
+                        a{
+                            @include mixins.f-prop(var(--color-regular-text), 1em, 300, "Montserrat");
+                        }
+
+                        button{
+                            @include mixins.f-prop(var(--color-regular-text), 1em, 300, "Montserrat");
+                        }
+                    }
+
+                    p{
+                        @include mixins.f-prop(var(--color-regular-text), .8em, 350, "Montserrat");
+                    }
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,106 @@
+@use './mixins';
+
+
+
+/*Basic sizing for the parent*/
+%main-container{
+    @include mixins.sizes(100%, 100vh);
+    @include mixins.d-prop(center, center, column);
+}
+
+/*words*/
+%h1-small{
+    @include mixins.f-prop(var(--color-regular-text), 1.1em, 300, "Montserrat");
+}
+
+%h1-md-01{
+    @include mixins.f-prop(var(--color-regular-text), 1.68em, 350, "Montserrat");
+}
+
+%h1-md-02{
+    @include mixins.f-prop(var(--color-regular-text), 1.45em, 350, "Montserrat");
+}
+
+%p-xs{
+    @include mixins.f-prop(var(--color-regular-text), .85em, 350, "Montserrat");
+}
+
+%p-xs-02{
+    @include mixins.f-prop(var(--color-regular-text), .75em, 320, "Montserrat");
+}
+
+%p-small{
+    @include mixins.f-prop(var(--color-regular-text), .9em, 350, "Montserrat");
+}
+
+%p-small-01{
+    @include mixins.f-prop(var(--color-regular-text), .95em, 350, "Montserrat");
+}
+
+
+/*img-cover*/
+%fit-cover{
+    @include mixins.sizes(100%, 100%);
+    object-fit: cover;
+}
+
+
+/*border-top-radius-left n right*/
+%bdr-tp{
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+/*border-bottom-radius-left n right*/
+%bdr-btm{
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+/*border-radius-general*/
+%bdr-10px{
+    border-radius: 6px;
+}
+
+/*padding left n right*/
+%pad-01{
+    padding: 0px 10px;
+}
+
+%pad-02{
+    padding: 0px 6px;
+}
+
+/*padding all directions*/
+%pad-03{
+    padding: 5px 6px;
+}
+
+
+/*borders for inputs*/
+%border-01{
+    border: solid 1px rgba(248, 247, 247, 0.212);
+}
+
+/*button properties*/
+%btn-outline{
+    @extend %pad-03;
+    @extend %p-small;
+    @extend %bdr-10px;
+    @extend %tr-025s;
+    background-color: var(--color-btn-01);
+    border: none;
+    cursor: pointer;
+}
+
+
+/*transition*/
+%tr-025s{
+    transition: .25s ease-in-out;
+}
+
+/*no-events*/
+%no-events{
+    opacity: 0;
+    pointer-events: none;   
+}

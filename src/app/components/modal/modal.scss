@@ -1,0 +1,29 @@
+@use '../../styles/mixins';
+@use '../../styles/placeholders';
+
+.modal{
+
+    @extend %main-container;
+    @extend %no-events;
+    background-color: var(--color-bg-01);
+    backdrop-filter: blur(6px);
+    position: absolute;
+    top: 0;
+    z-index: 10;
+
+
+    &-container{
+        @include mixins.d-prop(center, center, column);
+        @include mixins.sizes(80%, 10%, 470px);
+        @extend %bdr-10px;
+        background-color: var(--color-bg-06);
+
+        h1{
+            @extend %h1-md-02;
+        }
+        
+        p{
+            @extend %p-small;
+        }
+    }
+}

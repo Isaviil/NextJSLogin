@@ -1,0 +1,63 @@
+@use '../../styles/mixins';
+@use '../../styles/placeholders';
+
+.navbar{
+    @include mixins.d-prop(space-between, center);
+    @include mixins.sizes(100%, 3.5vh);
+    background-color: var(--color-01);
+    @extend %pad-01;
+    position: fixed;
+    z-index: 10;
+
+    &-left{
+       h1{
+         @extend %h1-small;
+         cursor: pointer
+       }
+    }
+
+    &-right{   
+        @include mixins.sizes(50%, 100%, 150px);
+
+        ul{                 
+            @include mixins.d-prop(space-between, center);
+            height: 100%;
+
+            li{
+                @include mixins.d-prop(center, center);
+                @extend %p-small-01;
+                list-style: none;
+                width: auto;                
+
+                .toggle{      
+                    @include mixins.d-prop(center, center); 
+                    @include mixins.sizes(30px, 3.5vh);            
+                    position: relative;                  
+                     
+                    .bi{
+                        font-size: 1em;
+                        position:absolute;                            
+                        color: var(--color-regular-text);    
+                        cursor: pointer;
+                        
+                    
+                    }
+                }
+            }
+        }
+    }
+
+    @include mixins.respond-to(md){
+        @include mixins.sizes(100%, 5vh);
+    }
+
+
+    @include mixins.respond-to(sm){
+
+        @include mixins.sizes(100%, 5.2vh);
+
+        &-right{
+            width: 35%;
+        }
+    }
+}

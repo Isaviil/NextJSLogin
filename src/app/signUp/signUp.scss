@@ -1,0 +1,291 @@
+@use '../styles/mixins';
+@use '../styles/placeholders';
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 1000px var(--color-01) inset !important;
+  -webkit-text-fill-color: var(--color-regular-text) !important;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+.signUp{
+    @extend %main-container;
+    background-image: linear-gradient(180deg, 
+    transparent,
+    transparent, 
+    var(--color-bg-01), 
+    var(--color-bg-02), 
+    var(--color-bg-03), 
+    var(--color-bg-04)), 
+    url(/images/e33bg.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+
+    &-img{
+        @include mixins.sizes(60%, 30%, 420px, 140px);
+        @extend %bdr-tp;
+        overflow: hidden;
+        img{
+            @extend %fit-cover;
+        }
+    }
+
+    &-account{
+        @include mixins.sizes(60%, 40%, 420px, 460px);
+        @include mixins.d-prop(space-evenly, center, column);
+        @extend %bdr-btm;
+        background-color: var(--color-bg-05);
+        position: relative;
+
+        &-title{
+
+            h1{
+                @extend %h1-md-02;
+            }
+        }
+
+        &-input{
+            @include mixins.sizes(100%, 85%);            
+
+            form{
+                @include mixins.sizes(100%, 100%);
+                @include mixins.d-prop(space-between, center, column);
+                gap: 5px;
+
+                .user-info{
+                    @include mixins.sizes(80%, 46%);
+                    @include mixins.d-prop(start, center, column);
+                    gap: 3px;
+
+                    label{
+                        @extend %p-small;
+                    }
+
+                    input{
+                    @extend %pad-02;
+                    @extend %border-01;
+                    @include mixins.f-prop(var(--color-regular-text), .8em, 400);
+                    @include mixins.sizes(70%, 44%);
+                    background-color: var(--color-input-01);    
+                    }
+                }
+            }
+        }
+
+        .signUp-btn{
+            @include mixins.sizes(100%);
+            @include mixins.d-prop(center, center);
+            gap: 8px;      
+          
+            a,
+            button{
+                @extend %btn-outline;
+
+                    &:hover{
+                    background-color: var(--color-btn-hover);
+                }
+            }
+        }
+
+        p{
+           position: absolute;
+           top: 102%;
+           @extend %p-small;  
+
+            a{
+                color: var(--color-regular-text-02);
+                @extend %tr-025s;
+
+                &:hover{
+                    color: var(--color-regular-text-03);
+                }
+            } 
+        }
+    }
+
+
+
+
+    @include mixins.respond-to(lg){
+
+        .signUp{
+
+            &-img{
+                @include mixins.sizes(null, 15%, null, 130px);
+            }
+
+            &-account{
+                @include mixins.sizes(80%, 65%, null, 420px);
+
+
+                &-title{
+
+                    h1{
+
+                    }
+                }
+
+                &-input{
+                    form{
+                
+                        .user-info{
+                  
+
+                        label{
+                            
+                            }
+
+                        input{
+                        
+                            }
+                        }
+                    }
+                }
+
+                .signUp-btn{
+          
+                    a,
+                    button{
+                        
+                        font-size: .83em;
+
+                        &:hover{
+                            background-color: var(--color-btn-hover);
+                        }
+                    }
+                }
+
+                p{ 
+                    @include mixins.f-prop(var(--color-regular-text), .85em, 400);
+
+                }                
+            }
+        }
+    }
+
+
+
+
+    @include mixins.respond-to(md){
+
+        .signUp{
+
+
+            &-img{
+                @include mixins.sizes(80%, 15%, 375px, 100px);
+            }
+
+
+            &-account{
+                @include mixins.sizes(80%, 65%, 375px, 400px);
+
+                &-title{
+
+                    h1{
+                        @include mixins.f-prop(var(--color-regular-text), 1.35em, 300, "Montserrat"); 
+                    }
+                }
+
+                &-input{
+                    form{
+                
+                        .user-info{
+                  
+
+                        label{
+                                @include mixins.f-prop(var(--color-regular-text), .88em, 300, "Montserrat");
+                            }
+
+                        input{
+                                @include mixins.sizes(75%, 48%);
+                            }
+                        }
+                    }
+                }
+
+                .signUp-btn{
+          
+                    a,
+                    button{
+                        
+                        font-size: .83em;
+
+                        &:hover{
+                            background-color: var(--color-btn-hover);
+                        }
+                    }
+                }
+
+                p{ 
+                    @include mixins.f-prop(var(--color-regular-text), .85em, 400);
+
+                }
+
+            }
+        }
+    }
+
+
+
+
+    @include mixins.respond-to(sm){
+
+        .signUp{
+
+            &-img{
+                @include mixins.sizes(80%, 15%, 325px, 75px);
+            }
+
+
+            &-account{
+                @include mixins.sizes(80%, 65%, 325px, 380px);
+                &-title{
+
+                    h1{
+                       @include mixins.f-prop(var(--color-regular-text), 1.25em, 300, "Montserrat"); 
+                    }
+                }
+
+                &-input{
+                    form{
+                
+                        .user-info{
+                  
+
+                            label{
+                                @include mixins.f-prop(var(--color-regular-text), .8em, 300, "Montserrat");
+                            }
+
+                            input{
+                                @include mixins.f-prop(var(--color-regular-text), .75em, 300, "Montserrat");
+                                @include mixins.sizes(85%, 50%)
+                            }
+                        }
+                    }
+                }
+
+                .signUp-btn{
+          
+                    a,
+                    button{
+                        
+                        font-size: .85em;
+
+                        &:hover{
+                            background-color: var(--color-btn-hover);
+                        }
+                    }
+                }
+
+                p{ 
+                    @include mixins.f-prop(var(--color-regular-text), .8em, 400);
+
+                }
+            }
+        }
+    }
+
+}

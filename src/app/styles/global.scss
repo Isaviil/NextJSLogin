@@ -1,0 +1,77 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap'); /*Bebas neue*/
+
+/*Roboto*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@200..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Barlow Condensed*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+/*Montserrat*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Oswald:wght@200..700&family=Roboto+Flex:opsz,wght@8..144,100..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Raleway*/
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+    cursor: pointer;
+}
+
+body{
+    background-color: var(--color-bg-05);
+    position: relative;
+    cursor: default;
+}
+
+
+:root{
+    --color-01: #0a1a24dc;
+    --color-bg-01: rgba(17, 24, 33, 0.507);
+    --color-bg-02: rgba(17, 24, 33, 0.644);
+    --color-bg-03: rgba(17, 24, 33, 0.973);
+    --color-bg-04: #111821;
+    --color-bg-05: rgba(17, 24, 33, 0.651);
+    --color-bg-06: rgba(77, 75, 75, 0.664);
+
+    --color-regular-text: rgb(255, 255, 255);
+    --color-regular-text-02: rgb(236, 108, 108);
+    --color-regular-text-03: rgb(255, 63, 49);
+    
+
+    --color-input-01: rgba(0, 0, 0, 0.664); 
+
+
+    --color-btn-01: rgba(37, 49, 85, 0.952);
+    --color-btn-hover: rgb(95, 76, 76);
+
+}
+
+body[data-theme= "light"]{
+    --color-01: #ffffff98;
+    --color-bg-01: rgba(177, 177, 177, 0.404);
+    --color-bg-02: rgba(156, 156, 156, 0.534);
+    --color-bg-03: rgba(201, 195, 195, 0.5);
+    --color-bg-04: #c7c7c7e0;
+    --color-bg-05: rgba(215, 221, 221, 0.863);
+    --color-bg-06: rgba(226, 202, 202, 0.664);
+
+
+    --color-regular-text: rgb(15, 0, 0);
+    --color-regular-text-02: rgb(189, 26, 94);
+    --color-regular-text-03: rgb(117, 34, 28);
+
+
+    --color-input-01: rgba(190, 186, 186, 0.74);
+    
+    --color-btn-01: rgb(243, 225, 234);
+    --color-btn-hover: rgba(243, 135, 153, 0.952);
+}

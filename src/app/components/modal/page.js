@@ -1,4 +1,4 @@
-
+'use client';
 import './modal.scss';
 import { useEffect, useRef } from 'react';
 import gsap from 'gsap';

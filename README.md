@@ -5,3 +5,5 @@
 <p>Se emplea Prisma como ORM para interactuar con la base de datos PostgreSQL alojada en Supabase.</p>
 
 <p>La interfaz es responsiva y se adapta al tamaño del dispositivo.</p>
+
+<p> Si se desea ingresar directamente para fines de prueba, hay un usuario ya creado: "Isavi" y la contraseña es simplemente "123" -sin comillas-.</p>

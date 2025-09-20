@@ -2,7 +2,7 @@
 
 <p>Este proyecto está desarrollado con Next.js e implementa autenticación de usuarios utilizando NextAuth.</p>
 
-<p>Se emplea Prisma como ORM para interactuar con la base de datos PostgreSQL alojada en Supabase.</p>
+<p>Usé Prisma como ORM para interactuar con Supabase.</p>
 
 <p>La interfaz es responsiva y se adapta al tamaño del dispositivo.</p>
 

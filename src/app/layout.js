@@ -1,6 +1,5 @@
 import "./styles/global.scss";
 import 'bootstrap-icons/font/bootstrap-icons.css';
-
 import ClientProviders from "./context/react-query/ClientProviders";
 
 export const metadata = {

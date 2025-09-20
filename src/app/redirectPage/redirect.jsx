@@ -17,7 +17,8 @@ export default function RedirectPage(){
 
     return(
         <div className='redirectPage' ref={page}>
-            <h1>Log in y redireccion exitosa.</h1>
+            <h1>Este pequeño proyecto fue una práctica para entender Nextjs.</h1>
+            <p>No hay nada más aquí</p>
             <button onClick={handleLogOut}>Cerrar sesión</button>
         </div>
     )

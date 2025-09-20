@@ -11,6 +11,7 @@ input:-webkit-autofill:focus {
 
 .home{
     @extend %main-container;
+    min-height: 550px;
     background-image: linear-gradient(180deg, 
     transparent,
     transparent, 
@@ -47,6 +48,7 @@ input:-webkit-autofill:focus {
             .home-logIn-title{
                 h1{
                     @extend %h1-md-02;
+                    text-align: center
                 }
             }   
 
@@ -68,9 +70,10 @@ input:-webkit-autofill:focus {
                     input{
                     @extend %pad-02;
                     @extend %border-01;
-                    @include mixins.f-prop(var(--color-regular-text), .8em, 400);
+                    @include mixins.f-prop(var(--color-regular-text), .85em, 400);
                     @include mixins.sizes(80%, 44%);
-                    background-color: var(--color-input-01);                                
+                    background-color: var(--color-input-01);        
+                    text-align: center                        
                     }
                 }
             }   

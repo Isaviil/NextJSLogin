@@ -45,7 +45,7 @@ export default function HomePage(){
         if (result.error){
             alert(result.error);
         } else {
-            setModalSuccess({ title: "Login exitóso", redirectTo: "/redirectPage" });
+            setModalSuccess({ title: "Login exitoso", redirectTo: "/redirectPage" });
         }
 
     }
@@ -72,12 +72,12 @@ export default function HomePage(){
                     <div className='home-logIn-input'>
                         <div className='user'>
                             <label htmlFor="username">Usuario</label>
-                            <input id='username' name='username' type='text'></input>
+                            <input id='username' name='username' type='text' placeholder='Isavi'></input>
                         </div>
 
                         <div className='password'>
                             <label htmlFor="password">Contraseña</label>
-                            <input id="password" name='password' type='password'></input>
+                            <input id="password" name='password' type='password' placeholder='123'></input>
                         </div>
                     </div>
 

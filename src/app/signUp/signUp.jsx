@@ -11,6 +11,8 @@ export default function SignUp(){
 
     const router = useRouter();
     const [modalSuccess, setModalSuccess] = useState(null);
+
+    //refs
     const containerRef = useRef();
     const childContainerRef = useRef();
     const childContainerRef2 = useRef();
@@ -34,7 +36,10 @@ export default function SignUp(){
                 body: JSON.stringify(newUser)
             });
 
-            if (!res.ok) throw new Error('Error creando al usuario');
+            if (!res.ok){
+                const data = await res.json();
+                throw new Error(data.error);
+            }
             return res.json();
         },
 

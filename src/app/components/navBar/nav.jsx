@@ -14,7 +14,6 @@ export default function Navbar(){
     const router = useRouter();
     const {theme, toggle} = useTheme();
     
-
     /*Toggling night/lightmode*/
     const toggleTheme = () => {
         toggle();

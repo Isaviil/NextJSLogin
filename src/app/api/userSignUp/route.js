@@ -12,6 +12,17 @@ const prisma = new PrismaClient();
 export async function POST(request) {
     const body = await request.json();
 
+    const existingUser = await prisma.user.findUnique({
+        where: {usuario: body.name}
+    });
+
+    if (existingUser){
+        return NextResponse.json(
+            {error: "Username already exists"},
+            {status: 400 }
+        )
+    }
+
     try{
         const newUser = await prisma.user.create({
             data: {

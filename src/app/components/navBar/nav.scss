@@ -20,7 +20,7 @@
         @include mixins.sizes(50%, 100%, 150px);
 
         ul{                 
-            @include mixins.d-prop(space-between, center);
+            @include mixins.d-prop(space-evenly, center);
             height: 100%;
 
             li{

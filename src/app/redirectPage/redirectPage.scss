@@ -20,6 +20,12 @@
 
     h1{
         @extend %h1-md-02;
+        text-align: center
+    }
+
+    p{
+        @extend %p-xs;
+        text-align: center
     }
 
     button{

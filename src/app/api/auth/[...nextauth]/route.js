@@ -22,14 +22,12 @@ export const authOptions = {
           throw new Error("User not found");
         }
 
-        // 2. Verify password (make sure you hash + verify)
-       /*  const isValid = await verifyPassword(credentials.password, user.contrasenia); */
         const isValid = credentials.password === user.contrasenia;
         if (!isValid) {
           throw new Error("Invalid password");
         }
 
-        // 3. Return user object (will be saved in the session)
+        // 3. Return user object 
         return {
           id: user.cod_usu,
           nombre: user.nombre,
@@ -39,15 +37,13 @@ export const authOptions = {
     })
   ],
   callbacks: { 
-    async session({ session, token }) { /* then this */ 
-      //TODO Write down: the names come from #3. firstParameter.tableName.objectsFrom#3
+    async session({ session, token }) { /* then this */      
       session.user.id = token.sub;
       session.user.nombre = token.nombre;
       console.log(session);
       return session;
     },
-
-    //TODO Write down: The more values you want to pass, the more parameters you write here.
+   
     async jwt({ token, user }) { /**This runs first */ 
       if (user) {
         token.nombre = user.nombre;

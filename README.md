@@ -1,4 +1,4 @@
-<img width="3167" height="1185" alt="Image" src="https://github.com/user-attachments/assets/d9ce3751-8599-4f4d-a3d6-af10b3b19dfc" />
+<img width="2692" height="1182" alt="Image" src="https://github.com/user-attachments/assets/d5814ac5-6972-412e-b65a-e92e9ab57743" />
 
 <p>Este proyecto está desarrollado con Next.js e implementa autenticación de usuarios utilizando NextAuth.</p>
 
